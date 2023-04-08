@@ -17,8 +17,12 @@ use App\Http\Controllers\Auth\AuthController;
 
   
 Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::get('/', [AuthController::class, 'index']);
+Route::get('profile', [AuthController::class, 'profile'])->name('profile');
+Route::get('portfolio', [AuthController::class, 'portfolio'])->name('portfolio');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('update', [AuthController::class, 'update']);

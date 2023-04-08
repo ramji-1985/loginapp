@@ -20,6 +20,14 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }  
+    public function profile()
+    {
+        return view('profile');
+    }  
+    public function portfolio()
+    {
+        return view('portfolio');
+    }
       
     /**
      * Write code on Method
@@ -110,4 +118,19 @@ class AuthController extends Controller
   
         return Redirect('login');
     }
+    public function update(Request $request)
+    {
+ $id=$request->uid;
+
+
+       User::where('id', $id)
+     ->update([
+        'name' =>$request->name,
+        'Phone' =>$request->phone,
+        'gender' =>$request->gender,
+        'dob' =>$request->dob,
+ ]);
+     echo '<h2>Updated succefully</h2>';
+    }
+
 }

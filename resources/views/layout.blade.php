@@ -67,6 +67,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('profile') }}" style="color:blue">Profile</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('portfolio') }}" style="color:blue">Portfolio    </a>
+                    </li>
                 @endguest
             </ul>
   
